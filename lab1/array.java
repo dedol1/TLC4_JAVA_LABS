@@ -1,7 +1,8 @@
 package lab1;
 
 class myArray{
-    int [] numbers = new int[6];
+    int a;
+    int [] numbers = new int[a];
 
     myArray(){
         System.out.println(">>> myArray object constructed");
@@ -12,8 +13,18 @@ class myArray{
         this.numbers = numbers;
     }
 
+    public void setA(int a) {
+        this.a = a;
+    }
 
+    public int getA() {
+        return a;
+    }
 
+    public void display(){
+        getA();
+
+    }
 }
 public class array {
 
@@ -22,8 +33,6 @@ public class array {
         // creating objects for the array class
         myArray firstArray = new myArray();
 
-
-       firstArray.numbers[0] = 1;
 
 
 
