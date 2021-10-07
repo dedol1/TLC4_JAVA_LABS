@@ -2,7 +2,7 @@ package lab1;
 
 import org.w3c.dom.ls.LSOutput;
 
-class outerClass{
+ class outerClass{
 
     String  name;
 
