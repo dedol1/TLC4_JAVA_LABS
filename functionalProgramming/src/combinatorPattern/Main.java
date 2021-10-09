@@ -2,6 +2,8 @@ package combinatorPattern;
 
 import java.time.LocalDate;
 
+import static combinatorPattern.customerRegistrationValidator.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -16,5 +18,18 @@ public class Main {
 
         System.out.println(validatorService.isValid(customer1));
 
+
+        // using the validator created using the combination pattern
+
+        validationResults results = isEmailValid()
+                .and(isPhoneValid())
+                .and(isAdult()).apply(customer1);
+
+        System.out.println(results);
+
+        if (results != validationResults.success){
+
+            throw new IllegalStateException(results.name());
+        };
     }
 }
