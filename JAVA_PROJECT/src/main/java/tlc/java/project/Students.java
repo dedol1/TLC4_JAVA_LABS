@@ -60,7 +60,7 @@ public class Students {
 
     public double getAverageGrade(){
         double sum = 0;
-        double average = 0;
+        double average;
 
         for (int i = 0; i < getGrades().size(); i++){
             sum += grades.get(i);
